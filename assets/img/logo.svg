@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Logo MRC">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#bfe6ff"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="98" fill="url(#sky)"/>
+  <!-- Ruban tricolore -->
+  <path d="M30,70 Q100,10 170,70 L160,80 Q100,30 40,80 Z" fill="#cf2027"/>
+  <path d="M30,82 Q100,22 170,82 L160,92 Q100,42 40,92 Z" fill="#fcd116"/>
+  <path d="M30,94 Q100,34 170,94 L160,104 Q100,54 40,104 Z" fill="#1e8a3c"/>
+  <!-- Étoile -->
+  <polygon points="100,18 104,32 119,32 107,41 112,55 100,46 88,55 93,41 81,32 96,32"
+           fill="#fcd116" stroke="#e0b800" stroke-width="1"/>
+  <!-- Arbre -->
+  <ellipse cx="100" cy="115" rx="38" ry="32" fill="#1e8a3c"/>
+  <ellipse cx="82" cy="108" rx="20" ry="18" fill="#2aa64a"/>
+  <ellipse cx="118" cy="108" rx="20" ry="18" fill="#136028"/>
+  <rect x="96" y="135" width="8" height="20" fill="#5b3a1e"/>
+  <!-- Sol -->
+  <path d="M30,160 Q100,140 170,160 L170,175 Q100,158 30,175 Z" fill="#2aa64a"/>
+  <path d="M30,170 Q100,150 170,170 L170,185 Q100,170 30,185 Z" fill="#1e8a3c"/>
+  <!-- Texte -->
+  <text x="100" y="195" text-anchor="middle" font-family="Arial, sans-serif"
+        font-size="14" font-weight="800" fill="#0a4d8c">RENOUVEAU</text>
+</svg>

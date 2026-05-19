@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Adhésion — MRC</title>
+  <meta name="description" content="Contactez le Mouvement pour le Renouveau Citoyen, adhérez, devenez bénévole ou faites un don." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <img src="assets/img/logo.svg" alt="Logo MRC" />
+      <div class="brand-text"><strong>Renouveau Citoyen</strong><span>Tenguedji Smaa Gokh</span></div>
+    </a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu">&#9776;</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="candidat.html">Le candidat</a></li>
+      <li><a href="mouvement.html">Le mouvement</a></li>
+      <li><a href="programme.html">Programme</a></li>
+      <li><a href="actualites.html">Actualités</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+      <li><a class="nav-cta" href="#adherer">Adhérer</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Restons en contact</h1>
+    <p>Posez vos questions, partagez vos idées, rejoignez le mouvement. Nous lisons et répondons à tous les messages.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3 style="color:var(--bleu);margin-bottom:.75rem;">Le siège du MRC</h3>
+        <p><strong>Adresse :</strong> Rufisque Ouest, Dakar, Sénégal</p>
+        <p><strong>Email :</strong> <a href="mailto:contact@renouveau-citoyen.sn">contact@renouveau-citoyen.sn</a></p>
+        <p><strong>Téléphone :</strong> <a href="tel:+221000000000">+221 00 000 00 00</a></p>
+        <p><strong>WhatsApp :</strong> <a href="#">+221 00 000 00 00</a></p>
+
+        <h3 style="color:var(--bleu);margin:1.5rem 0 .5rem;">Permanences</h3>
+        <p>Chaque samedi, de 10h à 13h, au siège du mouvement.<br>Le maire candidat reçoit sur rendez-vous dans les quartiers.</p>
+
+        <h3 style="color:var(--bleu);margin:1.5rem 0 .5rem;">Suivez-nous</h3>
+        <div class="social">
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="#" aria-label="X / Twitter">X</a>
+          <a href="#" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="TikTok">Tk</a>
+          <a href="#" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3 style="color:var(--bleu);margin-bottom:1rem;">Écrivez-nous</h3>
+        <form data-local>
+          <div class="form-grid">
+            <div>
+              <label for="prenom">Prénom</label>
+              <input id="prenom" name="prenom" type="text" required />
+            </div>
+            <div>
+              <label for="nom">Nom</label>
+              <input id="nom" name="nom" type="text" required />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required />
+            </div>
+            <div>
+              <label for="tel">Téléphone</label>
+              <input id="tel" name="tel" type="tel" />
+            </div>
+            <div class="full">
+              <label for="sujet">Sujet</label>
+              <select id="sujet" name="sujet">
+                <option>Question générale</option>
+                <option>Adhérer au mouvement</option>
+                <option>Devenir bénévole</option>
+                <option>Faire un don</option>
+                <option>Proposer une idée</option>
+                <option>Demande de rencontre</option>
+              </select>
+            </div>
+            <div class="full">
+              <label for="message">Votre message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="full">
+              <button type="submit" class="btn btn-primary">Envoyer le message</button>
+            </div>
+            <div class="full form-notice"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADHESION -->
+<section id="adherer" class="alt">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">Adhésion</div>
+      <h2>Devenez membre du MRC</h2>
+      <p>Adhérer au Mouvement pour le Renouveau Citoyen, c'est s'engager pour Rufisque Ouest. Cotisation symbolique de 1 000 FCFA/an.</p>
+    </div>
+
+    <div class="form-card" style="max-width:760px;margin:0 auto;">
+      <form data-local>
+        <div class="form-grid">
+          <div>
+            <label for="a-prenom">Prénom</label>
+            <input id="a-prenom" name="prenom" required />
+          </div>
+          <div>
+            <label for="a-nom">Nom</label>
+            <input id="a-nom" name="nom" required />
+          </div>
+          <div>
+            <label for="a-quartier">Quartier de résidence</label>
+            <input id="a-quartier" name="quartier" required />
+          </div>
+          <div>
+            <label for="a-age">Tranche d'âge</label>
+            <select id="a-age" name="age">
+              <option>16 - 25 ans</option>
+              <option>26 - 40 ans</option>
+              <option>41 - 60 ans</option>
+              <option>60 ans et +</option>
+            </select>
+          </div>
+          <div>
+            <label for="a-email">Email</label>
+            <input id="a-email" name="email" type="email" required />
+          </div>
+          <div>
+            <label for="a-tel">Téléphone</label>
+            <input id="a-tel" name="tel" type="tel" required />
+          </div>
+          <div class="full">
+            <label for="a-engagement">Comment souhaitez-vous vous engager ?</label>
+            <select id="a-engagement" name="engagement">
+              <option>Membre actif</option>
+              <option>Bénévole de quartier</option>
+              <option>Membre d'une commission thématique</option>
+              <option>Ambassadeur dans la diaspora</option>
+              <option>Soutien financier</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="a-mot">Votre message (facultatif)</label>
+            <textarea id="a-mot" name="message"></textarea>
+          </div>
+          <div class="full">
+            <button type="submit" class="btn btn-primary">Valider mon adhésion</button>
+          </div>
+          <div class="full form-notice"></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- BENEVOLE / DON -->
+<section>
+  <div class="container">
+    <div class="pillars">
+      <div class="pillar" id="benevole">
+        <div class="icon">B</div>
+        <h3>Devenir bénévole</h3>
+        <p>Donnez du temps à votre commune : tournées de quartier, journées citoyennes, communication, logistique.</p>
+        <a class="more" href="#adherer">Je m'engage →</a>
+      </div>
+      <div class="pillar" id="don">
+        <div class="icon">€</div>
+        <h3>Faire un don</h3>
+        <p>Soutenez nos actions et la campagne. Les dons sont publics et déclarés dans nos comptes trimestriels.</p>
+        <a class="more" href="mailto:dons@renouveau-citoyen.sn">Soutenir →</a>
+      </div>
+      <div class="pillar">
+        <div class="icon">D</div>
+        <h3>Diaspora</h3>
+        <p>Rufisquois de l'extérieur : rejoignez nos sections diaspora et investissez dans l'avenir de la commune.</p>
+        <a class="more" href="mailto:diaspora@renouveau-citoyen.sn">Nous écrire →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand" style="color:#fff;">
+          <img src="assets/img/logo.svg" alt="Logo MRC" style="width:48px;height:48px;background:#fff;border-radius:8px;padding:4px;" />
+          <div class="brand-text">
+            <strong style="color:#fff;">Renouveau Citoyen</strong>
+            <span style="color:var(--jaune);">Tenguedji Smaa Gokh</span>
+          </div>
+        </div>
+        <p>Mouvement politique citoyen au service de Rufisque Ouest.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="candidat.html">Le candidat</a></li>
+          <li><a href="mouvement.html">Le mouvement</a></li>
+          <li><a href="programme.html">Programme</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Engagement</h4>
+        <ul>
+          <li><a href="#adherer">Adhérer</a></li>
+          <li><a href="#don">Faire un don</a></li>
+          <li><a href="#benevole">Devenir bénévole</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>Rufisque Ouest, Dakar — Sénégal</li>
+          <li><a href="mailto:contact@renouveau-citoyen.sn">contact@renouveau-citoyen.sn</a></li>
+          <li><a href="tel:+221000000000">+221 00 000 00 00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-stripe"></div>
+    <div class="copyright">© <span id="year"></span> Mouvement pour le Renouveau Citoyen (MRC).</div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
