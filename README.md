@@ -31,12 +31,48 @@ Un logo SVG de secours est fourni. Pour utiliser le vrai logo du mouvement :
 
 ## Lancer en local
 
-Aucune compilation nécessaire. Servez le dossier avec :
+Avec Node.js (recommandé, identique à la prod) :
+
+```bash
+npm start
+# puis ouvrez http://localhost:3000
+```
+
+Ou avec Python si vous préférez :
 
 ```bash
 python3 -m http.server 8000
-# puis ouvrez http://localhost:8000
 ```
+
+> Note : pour le backoffice et le chargement de `data/site.json`, il est
+> indispensable de servir le site via un serveur HTTP (les navigateurs
+> bloquent les requêtes `fetch` en `file://`).
+
+## Déploiement sur Railway
+
+Le projet est prêt à être déployé sur [Railway](https://railway.app) :
+
+- `server.js` — petit serveur HTTP Node (sans dépendances) qui sert les fichiers statiques et écoute sur `process.env.PORT`.
+- `package.json` — déclare la commande `npm start`.
+- `railway.json` — configuration de build (Nixpacks) et de déploiement.
+- `.gitignore` / `.dockerignore` — exclusions.
+
+### Étapes de déploiement
+
+1. Connectez-vous sur [railway.app](https://railway.app) avec votre compte GitHub.
+2. **New Project → Deploy from GitHub Repo** et sélectionnez ce dépôt (`papamamour-spec/MRP`).
+3. Choisissez la branche à déployer (par défaut `main`, ou `claude/political-campaign-website-RtdTp` pour tester).
+4. Railway détecte automatiquement Node.js, installe et lance `npm start`.
+5. Dans l'onglet **Settings → Networking**, cliquez sur **Generate Domain** pour obtenir une URL publique (ex. `mrc-rufisque.up.railway.app`).
+6. Optionnel : **Custom Domain** pour brancher un nom de domaine (`renouveau-citoyen.sn`).
+
+Aucune variable d'environnement n'est requise. La variable `PORT` est fournie automatiquement par Railway.
+
+### Mise à jour du contenu (actualités, logo, photos)
+
+1. Dans le backoffice (`/admin/`) : modifiez ce qu'il faut, puis **Exporter site.json**.
+2. Remplacez `data/site.json` dans le dépôt GitHub et committez.
+3. Railway redéploie automatiquement à chaque `git push` sur la branche connectée.
 
 > Note : pour le backoffice et le chargement de `data/site.json`, il est
 > indispensable de servir le site via un serveur HTTP (les navigateurs
