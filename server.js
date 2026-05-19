@@ -49,7 +49,7 @@ const server = http.createServer((req, res) => {
   fs.stat(filePath, (err, stat) => {
     if (err) {
       // Page d'erreur très simple
-      return send(res, 404, '<h1>404 — Page introuvable</h1><p><a href="/">Retour à l\'accueil</a></p>',
+      return send(res, 404, '<h1>404 - Page introuvable</h1><p><a href="/">Retour à l\'accueil</a></p>',
         { 'Content-Type': 'text/html; charset=utf-8' });
     }
 
@@ -74,5 +74,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, HOST, () => {
-  console.log(`MRC — site servi sur http://${HOST}:${PORT}`);
+  console.log(`MRC - site servi sur http://${HOST}:${PORT}`);
 });

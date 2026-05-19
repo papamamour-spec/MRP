@@ -1,7 +1,7 @@
 {
   "name": "mrc-rufisque-ouest",
   "version": "1.0.0",
-  "description": "Site officiel du Mouvement pour le Renouveau Citoyen — Rufisque Ouest",
+  "description": "Site officiel du Mouvement pour le Renouveau Citoyen - Rufisque Ouest",
   "private": true,
   "scripts": {
     "start": "node server.js"

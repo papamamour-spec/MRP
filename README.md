@@ -3,23 +3,23 @@
 Site officiel du **Mouvement pour le Renouveau Citoyen**, porté par
 **Mame Seyni Faye**, candidat à la mairie de **Rufisque Ouest**.
 
-> Tenguedji Smaa Gokh — Construisons notre quartier.
+> Tenguedji Smaa Gokh - Construisons notre quartier.
 
 ## Structure du site
 
 Site statique (HTML / CSS / JavaScript), prêt à être hébergé sur n'importe
 quel serveur ou sur GitHub Pages / Netlify / Vercel.
 
-- `index.html` — Accueil
-- `candidat.html` — Présentation du candidat
-- `mouvement.html` — Le mouvement, sa charte, son organisation
-- `programme.html` — Programme « Rufisque Ouest 2030 » (6 axes, 42 mesures)
-- `actualites.html` — Communiqués et événements
-- `contact.html` — Contact et formulaire d'adhésion
-- `assets/css/styles.css` — Feuille de style
-- `assets/js/main.js` — Interactions (menu mobile, formulaires)
-- `assets/img/logo.svg` — Logo de secours (à remplacer par le logo officiel)
-- `assets/img/hero-bg.svg` — Fond de la section d'en-tête
+- `index.html` - Accueil
+- `candidat.html` - Présentation du candidat
+- `mouvement.html` - Le mouvement, sa charte, son organisation
+- `programme.html` - Programme « Rufisque Ouest 2030 » (6 axes, 42 mesures)
+- `actualites.html` - Communiqués et événements
+- `contact.html` - Contact et formulaire d'adhésion
+- `assets/css/styles.css` - Feuille de style
+- `assets/js/main.js` - Interactions (menu mobile, formulaires)
+- `assets/img/logo.svg` - Logo de secours (à remplacer par le logo officiel)
+- `assets/img/hero-bg.svg` - Fond de la section d'en-tête
 
 ## Remplacer le logo
 
@@ -52,10 +52,10 @@ python3 -m http.server 8000
 
 Le projet est prêt à être déployé sur [Railway](https://railway.app) :
 
-- `server.js` — petit serveur HTTP Node (sans dépendances) qui sert les fichiers statiques et écoute sur `process.env.PORT`.
-- `package.json` — déclare la commande `npm start`.
-- `railway.json` — configuration de build (Nixpacks) et de déploiement.
-- `.gitignore` / `.dockerignore` — exclusions.
+- `server.js` - petit serveur HTTP Node (sans dépendances) qui sert les fichiers statiques et écoute sur `process.env.PORT`.
+- `package.json` - déclare la commande `npm start`.
+- `railway.json` - configuration de build (Nixpacks) et de déploiement.
+- `.gitignore` / `.dockerignore` - exclusions.
 
 ### Étapes de déploiement
 
@@ -87,7 +87,7 @@ les photos sans toucher au code.
 - **Première connexion :** vous définissez vous-même le mot de passe.
   Il est haché en SHA-256 et stocké dans votre navigateur.
 - **Modifications locales :** toutes les modifications sont enregistrées
-  dans le `localStorage` de votre navigateur — elles sont immédiatement
+  dans le `localStorage` de votre navigateur - elles sont immédiatement
   visibles pour vous, sur l'appareil utilisé.
 - **Publication :** pour que les modifications soient visibles par tout
   le monde, exportez `site.json` depuis l'onglet « Publication &
@@ -114,12 +114,12 @@ qui écrit `data/site.json` côté serveur.
 
 Six axes prioritaires pour transformer Rufisque Ouest en 5 ans :
 
-1. **Gouvernance citoyenne & transparence** — budget participatif, mairie ouverte, redevabilité trimestrielle.
-2. **Cadre de vie & assainissement** — collecte renforcée, lutte contre l'érosion et les inondations, éclairage solaire.
-3. **Économie locale & emploi des jeunes** — pépinière d'entreprises, fablab, soutien à la pêche et à l'artisanat.
-4. **Éducation, santé & jeunesse** — cantines, bourses, postes de santé équipés, complexe culturel et sportif.
-5. **Mobilité & infrastructures** — pavage, drainage, transport collectif, logement social.
-6. **Femmes, inclusion & solidarité** — financement des GIE féminins, crèches, inclusion des aînés et personnes handicapées.
+1. **Gouvernance citoyenne & transparence** - budget participatif, mairie ouverte, redevabilité trimestrielle.
+2. **Cadre de vie & assainissement** - collecte renforcée, lutte contre l'érosion et les inondations, éclairage solaire.
+3. **Économie locale & emploi des jeunes** - pépinière d'entreprises, fablab, soutien à la pêche et à l'artisanat.
+4. **Éducation, santé & jeunesse** - cantines, bourses, postes de santé équipés, complexe culturel et sportif.
+5. **Mobilité & infrastructures** - pavage, drainage, transport collectif, logement social.
+6. **Femmes, inclusion & solidarité** - financement des GIE féminins, crèches, inclusion des aînés et personnes handicapées.
 
 Financement : optimisation des recettes locales, FECL, coopération décentralisée,
 mobilisation de la diaspora, PPP encadrés, sobriété budgétaire.

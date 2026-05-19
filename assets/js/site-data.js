@@ -1,5 +1,5 @@
 /* ============================================================
-   site-data.js — Chargement et application des contenus
+   site-data.js - Chargement et application des contenus
    Charge les données depuis localStorage (modifs admin) ou
    data/site.json (contenu publié). Applique logo, photo et
    actualités sur toutes les pages.
