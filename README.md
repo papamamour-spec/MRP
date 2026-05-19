@@ -31,13 +31,48 @@ Un logo SVG de secours est fourni. Pour utiliser le vrai logo du mouvement :
 
 ## Lancer en local
 
-Aucune compilation nécessaire. Ouvrez `index.html` dans un navigateur,
-ou servez le dossier avec :
+Aucune compilation nécessaire. Servez le dossier avec :
 
 ```bash
 python3 -m http.server 8000
 # puis ouvrez http://localhost:8000
 ```
+
+> Note : pour le backoffice et le chargement de `data/site.json`, il est
+> indispensable de servir le site via un serveur HTTP (les navigateurs
+> bloquent les requêtes `fetch` en `file://`).
+
+## Backoffice d'administration
+
+Un espace d'administration permet de gérer les actualités, le logo et
+les photos sans toucher au code.
+
+- **URL :** `/admin/` (par exemple `http://localhost:8000/admin/`)
+- **Première connexion :** vous définissez vous-même le mot de passe.
+  Il est haché en SHA-256 et stocké dans votre navigateur.
+- **Modifications locales :** toutes les modifications sont enregistrées
+  dans le `localStorage` de votre navigateur — elles sont immédiatement
+  visibles pour vous, sur l'appareil utilisé.
+- **Publication :** pour que les modifications soient visibles par tout
+  le monde, exportez `site.json` depuis l'onglet « Publication &
+  sauvegarde », déposez-le dans `data/site.json` du dépôt et committez.
+  Le déploiement (GitHub Pages, Netlify, etc.) propagera les changements.
+
+### Fonctionnalités du backoffice
+
+- Création / modification / suppression d'**actualités** (titre, date,
+  catégorie, résumé, contenu, image)
+- Remplacement du **logo**, de la **photo du candidat** et de l'**image
+  d'arrière-plan** de la page d'accueil
+- **Export / import** du fichier `site.json`
+- **Changement de mot de passe** depuis la barre supérieure
+
+### Limites (et évolution possible)
+
+Le backoffice fonctionne entièrement côté client. C'est volontairement
+simple et sans serveur. Pour une publication automatique, on peut
+brancher Netlify CMS / Decap (gratuit, basé sur Git) ou une petite API
+qui écrit `data/site.json` côté serveur.
 
 ## Le programme en bref
 

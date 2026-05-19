@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "updatedAt": null,
+  "media": {
+    "logo": null,
+    "candidatePhoto": null,
+    "heroBg": null
+  },
+  "news": [
+    {
+      "id": "n-001",
+      "date": "2026-05-01",
+      "category": "Annonce officielle",
+      "title": "Lancement officiel du Mouvement pour le Renouveau Citoyen",
+      "excerpt": "Mame Seyni Faye annonce la création du MRC et présente sa vision pour Rufisque Ouest.",
+      "content": "Le Mouvement pour le Renouveau Citoyen (MRC) a été lancé officiellement à Rufisque Ouest. Mame Seyni Faye, fondateur du mouvement, y a présenté les grandes lignes du projet « Rufisque Ouest 2030 ».",
+      "image": null
+    },
+    {
+      "id": "n-002",
+      "date": "2026-05-10",
+      "category": "Terrain",
+      "title": "Tournée d'écoute dans les quartiers",
+      "excerpt": "Une série de rencontres avec les habitants pour recueillir leurs priorités et co-construire le programme.",
+      "content": "Pendant tout le mois, l'équipe du MRC organise des rencontres dans chaque quartier de Rufisque Ouest pour écouter les besoins et propositions des habitants.",
+      "image": null
+    },
+    {
+      "id": "n-003",
+      "date": "2026-05-15",
+      "category": "Initiative",
+      "title": "Opération « Quartier propre »",
+      "excerpt": "Le MRC mobilise jeunes et bénévoles pour une journée de nettoyage citoyenne.",
+      "content": "Une grande opération de nettoyage citoyen est organisée samedi prochain. Rendez-vous à 8h au siège du mouvement. Matériel fourni.",
+      "image": null
+    }
+  ]
+}

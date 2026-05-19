@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Backoffice — MRC</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/img/logo.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body class="admin-body">
+
+<header class="admin-bar">
+  <a href="../index.html" class="brand" style="text-decoration:none;">
+    <img src="../assets/img/logo.svg" alt="" />
+    <div>
+      <strong>Backoffice MRC</strong>
+      <div><span>Espace d'administration</span></div>
+    </div>
+  </a>
+  <div class="bar-actions">
+    <a href="../index.html">Voir le site</a>
+    <button id="change-pass" type="button">Changer le mot de passe</button>
+    <button id="logout" type="button">Se déconnecter</button>
+  </div>
+</header>
+
+<!-- ============ AUTH ============ -->
+<section id="auth-section" class="auth-wrap">
+  <div class="auth-card">
+    <img src="../assets/img/logo.svg" alt="MRC" />
+    <h2 id="auth-title">Espace d'administration</h2>
+    <p id="auth-sub">Entrez votre mot de passe pour accéder au backoffice.</p>
+    <form id="auth-form">
+      <div class="field">
+        <label for="auth-password">Mot de passe</label>
+        <input id="auth-password" type="password" required autocomplete="current-password" />
+      </div>
+      <div class="field" id="auth-confirm-row" style="display:none;">
+        <label for="auth-confirm">Confirmer le mot de passe</label>
+        <input id="auth-confirm" type="password" autocomplete="new-password" />
+      </div>
+      <button id="auth-submit" type="submit">Se connecter</button>
+    </form>
+    <p class="hint">
+      Le mot de passe est défini lors de la première connexion et stocké chiffré dans votre navigateur.
+      Conservez-le : il n'existe pas de récupération.
+    </p>
+  </div>
+</section>
+
+<!-- ============ ADMIN ============ -->
+<section id="admin-section" class="admin-wrap" style="display:none;">
+  <div class="admin-header">
+    <div>
+      <h1>Administration du site</h1>
+      <div class="meta">
+        Dernière sauvegarde locale : <strong id="updated-at">—</strong> ·
+        <strong id="news-count">0</strong> actualité(s)
+      </div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="news" type="button">Actualités</button>
+    <button class="tab" data-tab="media" type="button">Logo &amp; photos</button>
+    <button class="tab" data-tab="settings" type="button">Publication &amp; sauvegarde</button>
+  </div>
+
+  <!-- News -->
+  <div id="tab-news" class="tab-panel active">
+    <div class="card">
+      <div class="news-toolbar">
+        <div>
+          <h2>Actualités</h2>
+          <p class="desc">Ajoutez, modifiez ou supprimez les communiqués affichés sur la page Actualités.</p>
+        </div>
+        <button id="add-news" class="btn btn-primary" type="button">+ Ajouter une actualité</button>
+      </div>
+      <div id="news-list" class="news-list"></div>
+    </div>
+  </div>
+
+  <!-- Media -->
+  <div id="tab-media" class="tab-panel">
+    <div class="card">
+      <h2>Logo &amp; photos</h2>
+      <p class="desc">
+        Les images sont stockées localement (format JPG/PNG/SVG, 2 Mo max). Pour les publier en ligne,
+        n'oubliez pas l'étape « Exporter » dans l'onglet suivant.
+      </p>
+
+      <div class="media-grid">
+        <div class="media-card">
+          <h3>Logo du mouvement</h3>
+          <div class="preview"><img id="logo-preview" alt="" /></div>
+          <label class="file-btn" for="logo-input">Changer</label>
+          <input id="logo-input" type="file" accept="image/*" />
+          <button id="logo-reset" class="reset-btn" type="button">Réinitialiser</button>
+        </div>
+
+        <div class="media-card">
+          <h3>Photo du candidat</h3>
+          <div class="preview"><img id="candidate-preview" alt="" /></div>
+          <label class="file-btn" for="candidate-input">Changer</label>
+          <input id="candidate-input" type="file" accept="image/*" />
+          <button id="candidate-reset" class="reset-btn" type="button">Réinitialiser</button>
+        </div>
+
+        <div class="media-card">
+          <h3>Image d'arrière-plan (accueil)</h3>
+          <div class="preview"><img id="hero-preview" alt="" /></div>
+          <label class="file-btn" for="hero-input">Changer</label>
+          <input id="hero-input" type="file" accept="image/*" />
+          <button id="hero-reset" class="reset-btn" type="button">Réinitialiser</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div id="tab-settings" class="tab-panel">
+    <div class="card">
+      <h2>Publier les modifications</h2>
+      <p class="desc">
+        Toutes vos modifications sont enregistrées <strong>localement</strong> dans ce navigateur.
+        Pour les rendre visibles à tous, exportez le fichier <code>site.json</code>
+        et déposez-le dans le dossier <code>data/</code> du dépôt.
+      </p>
+      <div class="actions-row">
+        <button id="export-json" class="btn btn-primary" type="button">⬇ Exporter site.json</button>
+        <label for="import-input" class="btn btn-ghost">⬆ Importer un fichier</label>
+        <input id="import-input" type="file" accept="application/json" />
+        <button id="clear-local" class="btn btn-danger" type="button">Effacer mes modifications locales</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Mode de publication</h2>
+      <p class="desc">
+        Pour que les modifications soient visibles publiquement, deux options :
+      </p>
+      <ol style="padding-left:1.2rem;color:var(--gris-fonce);line-height:1.7;">
+        <li><strong>Manuel (recommandé pour démarrer) :</strong> exportez <code>site.json</code>,
+          remplacez-le dans <code>data/site.json</code> du dépôt GitHub, et committez.
+          Le site sera mis à jour automatiquement après le déploiement.</li>
+        <li><strong>Automatisé :</strong> branchez ce backoffice à un hébergeur (Netlify CMS, Decap,
+          ou une petite API Node/PHP) pour publier en un clic. Voir la documentation
+          du dépôt pour la mise en place.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- Modale actualité -->
+<div id="news-modal" class="modal">
+  <div class="modal-card">
+    <h2 id="news-modal-title">Nouvelle actualité</h2>
+    <form id="news-form">
+      <input type="hidden" id="news-id" />
+      <input type="hidden" id="news-image-current" />
+      <div class="field">
+        <label for="news-title">Titre *</label>
+        <input id="news-title" type="text" required />
+      </div>
+      <div class="row">
+        <div class="field">
+          <label for="news-date">Date *</label>
+          <input id="news-date" type="date" required />
+        </div>
+        <div class="field">
+          <label for="news-category">Catégorie</label>
+          <select id="news-category">
+            <option>Annonce officielle</option>
+            <option>Terrain</option>
+            <option>Initiative</option>
+            <option>Position</option>
+            <option>Événement</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <label for="news-excerpt">Résumé (affiché dans la liste)</label>
+        <textarea id="news-excerpt" rows="2"></textarea>
+      </div>
+      <div class="field">
+        <label for="news-content">Contenu</label>
+        <textarea id="news-content" rows="5"></textarea>
+      </div>
+      <div class="field">
+        <label for="news-image">Image (optionnelle, 2 Mo max)</label>
+        <input id="news-image" type="file" accept="image/*" />
+        <img id="news-image-preview" alt="" />
+      </div>
+      <div class="actions">
+        <button id="news-cancel" type="button" class="btn btn-ghost">Annuler</button>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="../assets/js/admin.js"></script>
+</body>
+</html>
