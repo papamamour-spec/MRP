@@ -1,5 +1,5 @@
 /* ============================================================
-   admin.js — Backoffice MRC
+   admin.js - Backoffice MRC
    Authentification simple (mot de passe haché localement),
    gestion des actualités, des médias (logo, photos) et
    export/import JSON pour synchroniser avec le dépôt.
@@ -133,7 +133,7 @@ function renderAll() {
 function renderMeta() {
   $('#updated-at').textContent = state.updatedAt
     ? new Date(state.updatedAt).toLocaleString('fr-FR')
-    : '— (non sauvegardé)';
+    : '- (non sauvegardé)';
   $('#news-count').textContent = (state.news || []).length;
 }
 
